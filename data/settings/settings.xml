@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Common>
-		<SiteName>AfterLogic WebMail Lite</SiteName>
+		<SiteName>University of Aberdeen - WebMail</SiteName>
 		<LicenseKey />
 		<AdminLogin>mailadm</AdminLogin>
 		<AdminPassword>12345</AdminPassword>
 		<DBType>MySQL</DBType>
 		<DBPrefix />
-		<DBHost />
-		<DBName />
-		<DBLogin />
+		<DBHost>mysql.abdn.ac.uk</DBHost>
+		<DBName>mail</DBName>
+		<DBLogin>mail</DBLogin>
 		<DBPassword />
 		<UseSlaveConnection>Off</UseSlaveConnection>
 		<DBSlaveHost>127.0.0.1</DBSlaveHost>
@@ -17,43 +17,52 @@
 		<DBSlaveLogin>root</DBSlaveLogin>
 		<DBSlavePassword />
 		<DefaultLanguage>English</DefaultLanguage>
-		<DefaultTimeZone>0</DefaultTimeZone>
-		<DefaultTimeFormat>F12</DefaultTimeFormat>
-		<DefaultDateFormat>MM/DD/YYYY</DefaultDateFormat>
+		<DefaultTimeZone>26</DefaultTimeZone>
+		<DefaultTimeFormat>F24</DefaultTimeFormat>
+		<DefaultDateFormat>DD Month YYYY</DefaultDateFormat>
 		<AllowRegistration>Off</AllowRegistration>
 		<AllowPasswordReset>Off</AllowPasswordReset>
-		<EnableLogging>Off</EnableLogging>
+		<EnableLogging>On</EnableLogging>
 		<EnableEventLogging>Off</EnableEventLogging>
-		<LoggingLevel>Full</LoggingLevel>
+		<LoggingLevel>Error</LoggingLevel>
 		<EnableMobileSync>Off</EnableMobileSync>
+		<LoginStyleImage />
+		<AppStyleImage />
+		<DefaultTab />
+		<RedirectToHttps>Off</RedirectToHttps>
+		<PasswordMinLength>0</PasswordMinLength>
+		<PasswordMustBeComplex>Off</PasswordMustBeComplex>
 	</Common>
 	<WebMail>
 		<AllowWebMail>On</AllowWebMail>
 		<IncomingMailProtocol>IMAP4</IncomingMailProtocol>
-		<IncomingMailServer>127.0.0.1</IncomingMailServer>
-		<IncomingMailPort>143</IncomingMailPort>
-		<IncomingMailUseSSL>Off</IncomingMailUseSSL>
-		<OutgoingMailServer>127.0.0.1</OutgoingMailServer>
-		<OutgoingMailPort>25</OutgoingMailPort>
+		<IncomingMailServer>outlook.office365.com</IncomingMailServer>
+		<IncomingMailPort>993</IncomingMailPort>
+		<IncomingMailUseSSL>On</IncomingMailUseSSL>
+		<OutgoingMailServer>smtp.office365.com</OutgoingMailServer>
+		<OutgoingMailPort>587</OutgoingMailPort>
 		<OutgoingMailAuth>AuthCurrentUser</OutgoingMailAuth>
 		<OutgoingMailLogin />
 		<OutgoingMailPassword />
-		<OutgoingMailUseSSL>Off</OutgoingMailUseSSL>
+		<OutgoingMailUseSSL>On</OutgoingMailUseSSL>
 		<OutgoingSendingMethod>Specified</OutgoingSendingMethod>
 		<UserQuota>0</UserQuota>
 		<ShowQuotaBar>On</ShowQuotaBar>
-		<AutoCheckMailInterval>1</AutoCheckMailInterval>
-		<DefaultSkin>AfterLogic</DefaultSkin>
-		<MailsPerPage>20</MailsPerPage>
-		<AllowUsersChangeInterfaceSettings>On</AllowUsersChangeInterfaceSettings>
+		<AutoCheckMailInterval>0</AutoCheckMailInterval>
+		<DefaultSkin>Default</DefaultSkin>
+		<MailsPerPage>30</MailsPerPage>
+		<AllowUsersChangeInterfaceSettings>Off</AllowUsersChangeInterfaceSettings>
 		<AllowUsersChangeEmailSettings>Off</AllowUsersChangeEmailSettings>
 		<EnableAttachmentSizeLimit>Off</EnableAttachmentSizeLimit>
 		<AttachmentSizeLimit>102400000</AttachmentSizeLimit>
 		<ImageUploadSizeLimit>10240000</ImageUploadSizeLimit>
 		<AllowLanguageOnLogin>On</AllowLanguageOnLogin>
 		<FlagsLangSelect>Off</FlagsLangSelect>
-		<LoginFormType>Email</LoginFormType>
+		<LoginFormType>Login</LoginFormType>
 		<UseReCaptcha>Off</UseReCaptcha>
+		<LoginSignMeType>DefaultOn</LoginSignMeType>
+		<LoginAtDomainValue>abdn.ac.uk</LoginAtDomainValue>
+		<UseLoginWithoutDomain>Off</UseLoginWithoutDomain>
 		<AllowNewUsersRegister>On</AllowNewUsersRegister>
 		<AllowUsersAddNewAccounts>Off</AllowUsersAddNewAccounts>
 		<AllowOpenPGP>Off</AllowOpenPGP>
@@ -85,11 +94,30 @@
 		<DAVUrl />
 	</Calendar>
 	<Contacts>
-		<AllowContacts>On</AllowContacts>
+		<AllowContacts>Off</AllowContacts>
 		<ContactsPerPage>20</ContactsPerPage>
 		<ShowGlobalContactsInAddressBook>Off</ShowGlobalContactsInAddressBook>
 		<GlobalAddressBookVisibility>Off</GlobalAddressBookVisibility>
 	</Contacts>
+	<Files>
+		<AllowFiles>Off</AllowFiles>
+		<EnableSizeLimit>Off</EnableSizeLimit>
+		<SizeLimit>0</SizeLimit>
+	</Files>
+	<Sip>
+		<AllowSip>Off</AllowSip>
+		<Realm />
+		<WebsocketProxyUrl />
+		<OutboundProxyUrl />
+		<CallerID />
+	</Sip>
+	<Twilio>
+		<AllowTwilio>Off</AllowTwilio>
+		<PhoneNumber />
+		<AccountSID />
+		<AuthToken />
+		<AppSID />
+	</Twilio>
 	<Socials>
 		<Google>
 			<Allow>Off</Allow>
@@ -123,5 +151,25 @@
 			<Scopes>auth</Scopes>
 			<ApiKey />
 		</Twitter>
-	</Socials>		
+	</Socials>
+	<Helpdesk>
+		<AllowHelpdesk>Off</AllowHelpdesk>
+		<AdminEmailAccount />
+		<ClientIframeUrl />
+		<AgentIframeUrl />
+		<SiteName />
+		<StyleAllow>Off</StyleAllow>
+		<StyleImage />
+		<StyleText />
+		<FetcherType>NONE</FetcherType>
+		<FacebookAllow>Off</FacebookAllow>
+		<FacebookId />
+		<FacebookSecret />
+		<GoogleAllow>Off</GoogleAllow>
+		<GoogleId />
+		<GoogleSecret />
+		<TwitterAllow>Off</TwitterAllow>
+		<TwitterId />
+		<TwitterSecret />
+	</Helpdesk>
 </Settings>

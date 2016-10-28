@@ -4916,8 +4916,8 @@ html.rtl .quick_reply .buttons .full_form {
   padding: 4px 10px;
   line-height: 120%;
   position: relative;
-  color: #888785;
-  text-shadow: 0px 1px 0px #ffffff;
+  color: #fff;
+  text-shadow: 0px 1px 0px #2f2f2f;
 }
 html.rtl .tabs_panel .item {
   margin-left: 0px;
@@ -4986,7 +4986,7 @@ html.rtl .tabs_panel .item {
   right: -20px;
 }
 .tabs_panel .current {
-  color: #212120;
+  color: #fff;
   font-weight: bold;
 }
 .tabs_panel .control {
@@ -5144,7 +5144,7 @@ html.rtl .tabs_panel .logout {
   text-align: center;
 }
 html.mobile .LoginLayout {
-  background: #ece9e0;
+  background: #75838c;
 }
 .LoginLayout .vhelper {
   display: inline-block;
@@ -5161,10 +5161,10 @@ html.mobile .LoginLayout {
   vertical-align: middle;
   padding: 20px;
   font-size: 9pt;
-  width: 280px;
-  color: #929292;
+  width: 300px;
+  color: #fff;
 }
-.login_panel .header {
+/*.login_panel .header {
   height: 95px;
   margin-bottom: 30px;
 }
@@ -5192,8 +5192,6 @@ html.mobile .LoginLayout {
   text-transform: none;
   line-height: 1;
   font-family: 'afterlogic';
-  /* Better Font Rendering =========== */
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -5207,6 +5205,20 @@ html.mobile .LoginLayout {
   margin-top: -20px;
   color: #D7D3C8;
   text-shadow: 0 1px 0 #ffffff, 0 -1px 0 #b4afa0, -1px -1px #d2c6a5;
+}*/
+.login_panel .header {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 95px;
+  margin-top: 10px;
+  background: url("images/logo.png?7.6.10") no-repeat center top;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .login_panel .header {
+    background-image: url("images/logo2x.png?7.6.10");
+    background-size: 124px 95px;
+  }
 }
 .login_panel .login_panel_content {
   -webkit-perspective: 4000px;
@@ -5283,7 +5295,7 @@ html.mobile .LoginLayout {
 .login_panel .login_panel_content .content.send .question_title {
   display: block;
   font-size: 11pt;
-  color: #929292;
+  color: #fff;
 }
 .login_panel .login_panel_content .content.forgot,
 .login_panel .login_panel_content .content.changepass,
@@ -5362,7 +5374,7 @@ html.rtl .login_panel .languages {
   left: 20px;
 }
 .login_panel .description {
-  color: #929292;
+  color: #fff;
   margin-top: 20px;
 }
 .login_panel .social_description {
@@ -5412,7 +5424,7 @@ html.rtl .login_panel .languages {
 }
 .login_panel .row .value.suffix .text {
   font: 12pt Helvetica, Tahoma, Arial, sans-serif;
-  color: #777;
+  color: #fff;
 }
 .login_panel .row .title {
   display: inline-block;
@@ -10661,7 +10673,7 @@ html {
   overflow: hidden;
 }
 body {
-  background: #ece9e0;
+  background: #75838c;
   font: normal 9pt Helvetica, Tahoma, Arial, sans-serif;
   height: 100%;
   overflow: auto;
@@ -10981,8 +10993,12 @@ html.rtl .settings .panel.navigation .items_list .item > .title.droppableHover .
 .panel.groups .items_list .item.canSelect > .title,
 .panel.storages .items_list .item.canSelect > .title,
 .panel.calendar_manager .items_list .item.canSelect > .title,
-.settings .folders .items_list .item.canSelect > .title,
 .settings .panel.navigation .items_list .item.canSelect > .title {
+  cursor: pointer;
+  color: #ddd;
+  text-shadow: 0px 1px 0px #222;
+}
+.settings .folders .items_list .item.canSelect > .title {
   cursor: pointer;
   color: #777777;
   text-shadow: 0px 1px 0px #ffffff;

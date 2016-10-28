@@ -1,0 +1,10 @@
+##RewriteEngine On
+
+##############################################
+# Maintenance Mode
+# Rewrite after 6am but exclude our admin IPs
+##############################################
+##RewriteCond "%{TIME_YEAR}%{TIME_MON}%{TIME_DAY}" 20160101
+##RewriteCond "%{TIME_HOUR}%{TIME_MIN}" >0600
+##RewriteCond %{REMOTE_ADDR} !^192\.162\.1\.254$
+##RewriteRule .*$ http://www.abdn.ac.uk/medical/maintenance/ [L]
